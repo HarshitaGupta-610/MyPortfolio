@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<title>Harshita Gupta - Experience</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class="experience-page">
+
+	<header>
+		<h2 class="logo"><span>H</span>arshita</h2>
+
+		<nav>
+			<a href="index.html" style="--d:0.1s;">Home</a>
+			<a href="Education.html" style="--d:0.2s;">Education</a>
+			<a class="active" href="Experience.html" style="--d:0.3s;">Experience</a>
+	 <a href="Projects.html" style="--d:0.4s;">Projects</a>
+    <a href="Achievements.html" style="--d:0.5s;">Achievements</a>
+		</nav>
+
+		<button id="view-resume-btn">
+			<a href="#" id="view-resume-link">View Resume</a>
+		</button>
+	</header>
+
+	<section class="experience-section" id="experience">
+
+		<div class="experience-hero">
+			<p class="education-kicker">MY PROFESSIONAL JOURNEY</p>
+
+			<h2 class="section-title">Experience</h2>
+
+			<p class="education-subtitle">
+				Building practical skills through internships, industry projects,
+				and real-world software development experiences.
+			</p>
+		</div>
+        		<article class="experience-card">
+
+			<div class="company-logo">
+				<img src="Experience/Falocnet.png"
+					 alt="Falconet Internet Pvt. Ltd.">
+			</div>
+
+			<div class="experience-content">
+
+				<h3>Falconet Internet Pvt. Ltd.</h3>
+
+				<p class="experience-role">
+					Full Stack Web Development Intern
+				</p>
+
+				<p class="experience-highlight">
+					November 2025 – January 2026
+				</p>
+
+				<ul>
+
+					<li>
+						Built a Project Tracker Dashboard using
+						MongoDB, Express.js, React.js and Node.js (MERN)
+						with full CRUD operations and real-time project monitoring.
+					</li>
+
+					<li>
+						Designed and integrated RESTful APIs and developed
+						data visualization features to track project progress
+						and performance metrics.
+					</li>
+
+				</ul>
+
+				<div class="experience-links">
+
+					<a href="https://drive.google.com/file/d/1WQXhN4Ao7bmwt4ZvrA0MovgUYQroIRJ_/view?usp=sharing"
+					   target="_blank">
+						Certificate
+					</a>
+
+					<a href="https://github.com/HarshitaGupta-610/mern-dashboard"
+					   target="_blank">
+						Project Repo
+					</a>
+
+					<a href="https://mern-dashboard-mauve.vercel.app"
+					   target="_blank">
+						View Project
+					</a>
+
+				</div>
+
+			</div>
+
+		</article>		<article class="experience-card">
+<div class="company-logo">
+    <img src="Experience/IGDTUW.jpg"
+         alt="IGDTUW">
+
+    <div class="end-dot"></div>
+</div>
+
+			<div class="experience-content">
+
+				<h3>Indira Gandhi Delhi Technical University for Women</h3>
+
+				<p class="experience-role">
+					Full Stack Development Intern
+				</p>
+
+				<p class="experience-highlight">
+					June 2025 – July 2025
+				</p>
+
+				<ul>
+
+					<li>
+						Developed NutriMate, a nutrition-tracking app
+						using JavaScript, Python, NumPy, Pandas and Firebase
+						to monitor dietary intake and analyze nutrient deficiencies
+						using data-driven models.
+					</li>
+
+					<li>
+						Implemented diet-plan recommendations to provide
+						personalized nutrition guidance, addressing gaps where
+						75% of adults fail to meet nutritional needs and
+						1 in 10 lack access to professional advice.
+					</li>
+
+				</ul>
+
+				<div class="experience-links">
+
+					<a href="https://drive.google.com/file/d/1uw0Pc1qxgntrbb38gMPV3FbmDo3Na67V/view?usp=sharing"
+					   target="_blank">
+						Certificate
+					</a>
+
+					<a href="https://github.com/HarshitaGupta-610/NutriMate"
+					   target="_blank">
+						Project Repo
+					</a>
+
+					<a href="https://nutrimate10.netlify.app/"
+					   target="_blank">
+						View Project
+					</a>
+
+				</div>
+
+			</div>
+
+		</article>
+
+	</section>
+
+	<div id="resume-modal" class="modal" aria-hidden="true">
+		<div class="modal-content">
+			<button class="modal-close" aria-label="Close resume">×</button>
+			<iframe src="Resume_HarshitaGupta.pdf"
+					frameborder="0"
+					title="Resume PDF"></iframe>
+		</div>
+	</div>
+
+	<script>
+		(function(){
+			const btn = document.getElementById('view-resume-btn');
+			const link = document.getElementById('view-resume-link');
+			const modal = document.getElementById('resume-modal');
+			const close = modal.querySelector('.modal-close');
+
+			function openModal(e){
+				if(e) e.preventDefault();
+				modal.style.display = 'flex';
+				modal.setAttribute('aria-hidden','false');
+				document.body.style.overflow = 'hidden';
+			}
+
+			function closeModal(){
+				modal.style.display = 'none';
+				modal.setAttribute('aria-hidden','true');
+				document.body.style.overflow = '';
+			}
+
+			btn.addEventListener('click', openModal);
+			link.addEventListener('click', openModal);
+			close.addEventListener('click', closeModal);
+
+			modal.addEventListener('click', function(e){
+				if(e.target === modal) closeModal();
+			});
+
+			document.addEventListener('keydown', function(e){
+				if(e.key === 'Escape') closeModal();
+			});
+		})();
+	</script>
+
+</body>
+
+</html>

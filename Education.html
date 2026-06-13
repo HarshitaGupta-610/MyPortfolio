@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<title>Harshita Gupta - Education</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class="education-page">
+
+	<header>
+		<h2 class="logo"><span>H</span>arshita</h2>
+		<nav>
+			<a href="index.html" style="--d:0.1s;">Home</a>
+			<a class="active" href="Education.html" style="--d:0.2s;">Education</a>
+			<a href="Experience.html" style="--d:0.3s;">Experience</a>
+    <a href="Projects.html" style="--d:0.4s;">Projects</a>
+    <a href="Achievements.html" style="--d:0.5s;">Achievements</a>
+		</nav>
+		<button id="view-resume-btn"><a href="#" id="view-resume-link">View Resume</a></button>
+	</header>
+
+	<section class="education-section" id="education">
+		<div class="education-hero">
+			<p class="education-kicker">MY ACADEMIC JOURNEY</p>
+			<h2 class="section-title">Education</h2>
+			<p class="education-subtitle">A consistent academic record from school to undergraduate Computer Science, built with discipline, curiosity, and strong performance.</p>
+		</div>
+
+		<article class="edu-card">
+			<div class="edu-image-box">
+				<img src="Education/College.png" alt="IGDTUW College">
+			</div>
+	<div class="edu-content">
+    <h3>Indira Gandhi Delhi Technical University for Women</h3>
+
+    <p class="edu-highlight">
+    Among the top CGPA holders in the Computer Science & Engineering department (Current CGPA: 9.35)
+</p>
+
+    <ul>
+        <li>B.Tech in Computer Science and Engineering</li>
+        <li>Duration: August 2024 – May 2028</li>
+        <li>Represented IGDTUW at various hackathons, reaching multiple semi-finals and finals.</li>
+        <li>Actively involved in technical projects, competitive programming, and innovation challenges.</li>
+    </ul>
+
+    <div class="semester-scores">
+        <span>Sem 1: 9.33</span>
+        <span>Sem 2: 9.14</span>
+        <span>Sem 3: 9.59</span>
+    </div>
+</div>
+		</article>
+
+		<article class="edu-card">
+			<div class="edu-image-box">
+				<img src="Education/12th.png" alt="12th Class Achievement">
+			</div>
+			<div class="edu-content">
+    <h3>Maharaja Agrasen Public School </h3>
+
+    <p class="edu-highlight">
+        Among the top academic performers of the school.
+    </p>
+
+    <ul>
+        <li>Class XII (CBSE)</li>
+        <li>Board Examination Score: 93.6%</li>
+        <li>Secured AIR 22,498 in JEE Mains 2024.</li>
+        <li>Built a strong foundation in Mathematics, Physics, and Chemistry.</li>
+    </ul>
+</div>
+		</article>
+
+		<article class="edu-card">
+			<div class="edu-image-box">
+				<img src="Education/10th.png" alt="10th Class Achievement">
+			</div>
+			<div class="edu-content">
+    <h3>St. Joseph School</h3>
+
+    <p class="edu-highlight">
+        Among the city’s top-performing students in the CBSE Board Examination.
+    </p>
+
+    <ul>
+        <li>Class X (CBSE)</li>
+        <li>Board Examination Score: 97.4%</li>
+        <li>Represented the school in various state-level academic and co-curricular competitions.</li>
+        <li>Recognized for consistent academic excellence.</li>
+    </ul>
+</div>
+		</article>
+	</section>
+
+	<div id="resume-modal" class="modal" aria-hidden="true">
+		<div class="modal-content">
+			<button class="modal-close" aria-label="Close resume">×</button>
+			<iframe src="Resume_HarshitaGupta.pdf" frameborder="0" title="Resume PDF"></iframe>
+		</div>
+	</div>
+
+	<script>
+		(function(){
+			const btn = document.getElementById('view-resume-btn');
+			const link = document.getElementById('view-resume-link');
+			const modal = document.getElementById('resume-modal');
+			const close = modal.querySelector('.modal-close');
+			function openModal(e){
+				if(e) e.preventDefault();
+				modal.style.display = 'flex';
+				modal.setAttribute('aria-hidden','false');
+				document.body.style.overflow = 'hidden';
+			}
+			function closeModal(){
+				modal.style.display = 'none';
+				modal.setAttribute('aria-hidden','true');
+				document.body.style.overflow = '';
+			}
+			btn.addEventListener('click', openModal);
+			link.addEventListener('click', openModal);
+			close.addEventListener('click', closeModal);
+			modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+			document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+		})();
+	</script>
+
+</body>
+</html>
